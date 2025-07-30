@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Catalog - PureHex Media</title>
+    <title>Design Catalog - ProHex Media</title>
     <link rel="icon" type="image/png" href="logo.png" />
+
+    <!-- ====================================================== -->
+    <!-- THE FIX: Open Graph / Social Media Meta Tags -->
+    <!-- ====================================================== -->
+    <meta property="og:title" content="ProHex Media - Festive Design Catalog">
+    <meta property="og:description" content="Browse our exclusive collection of customizable designs for Independence Day and Raksha Bandhan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://purefestive.netlify.app/"> 
+    <meta property="og:image" content="https://purefestive.netlify.app/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ProHex Media - Festive Design Catalog">
+    <meta name="twitter:description" content="Browse our exclusive collection of customizable designs for Independence Day and Raksha Bandhan.">
+    <meta name="twitter:image" content="https://purefestive.netlify.app/social-preview.jpg">
+    <!-- ====================================================== -->
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -61,7 +79,7 @@
     generateOrderLink() {
         // IMPORTANT: Replace with your WhatsApp number
         const yourWhatsAppNumber = 'YOUR_WHATSAPP_NUMBER_HERE'; 
-        let message = 'Hello PureHex Media,\n\nI am interested in the following custom designs:\n';
+        let message = 'Hello ProHex Media,\n\nI am interested in the following custom designs:\n';
         if (this.selectedID) { message += `\n- Independence Day Design: #${this.selectedID}`; }
         if (this.selectedRB) { message += `\n- Raksha Bandhan Design: #${this.selectedRB}`; }
         message += '\n\nPlease let me know the next steps!';
@@ -78,8 +96,8 @@
     <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
         <div class="flex items-center justify-between px-6 py-4">
             <a href="index.html" class="text-xl font-bold">
-              <img src="logo.png" alt="PureHex Logo" class="h-6 inline-block mr-2" />
-              <span class="text-white">Pure<span class="text-blue-500">Hex</span> Media</span>
+              <img src="logo.png" alt="ProHex Media Logo" class="h-6 inline-block mr-2" />
+              <span class="text-white">Pro<span class="text-blue-500">Hex</span> Media</span>
             </a>
             <nav class="hidden md:flex space-x-6 text-sm">
               <a href="index.html" class="hover:text-blue-500">Home</a>
@@ -151,17 +169,12 @@
         <h2 class="text-3xl font-bold mb-4 text-white">Ready to Order?</h2>
         <div class="max-w-xl mx-auto">
             <p class="text-gray-400 mb-8">
-              Simply click to select your favorite designs. When you're ready, click the button below to Pureceed.
+              Simply click to select your favorite designs. When you're ready, click the button below to proceed.
             </p>
             <button @click="if (selectedID || selectedRB) isInfoModalOpen = true"
                :class="{ 'opacity-50 cursor-not-allowed': !selectedID && !selectedRB }"
                class="bg-gradient-to-r from-teal-500 to-green-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 inline-flex items-center gap-3">
-              <!-- ====================================================== -->
-              <!-- THE FIX: New, official WhatsApp Logo SVG -->
-              <!-- ====================================================== -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zM12.04 20.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.41 0-4.48 3.64-8.12 8.12-8.12 2.18 0 4.22.85 5.74 2.38 1.52 1.52 2.38 3.56 2.38 5.74-.01 4.48-3.65 8.12-8.12 8.12zm4.21-6.11c-.23-.12-1.35-.67-1.56-.74-.21-.07-.36-.12-.52.12-.15.23-.59.74-.72.89-.13.15-.26.17-.48.05-.23-.12-1-.36-1.89-1.18-.7-.64-1.17-1.43-1.31-1.68-.14-.25-.01-.38.11-.51.11-.11.23-.29.35-.43.12-.15.15-.25.23-.42.07-.17.04-.31-.02-.43s-.52-1.25-.71-1.71c-.2-.46-.39-.4-.52-.4h-.47c-.16 0-.41.05-.62.29-.21.25-.8.79-.8 1.93s.82 2.24.93 2.4.8 1.81 2.75 3.5c1.95 1.69 2.74 1.79 3.46 1.79.72 0 1.35-.31 1.53-.62.19-.31.19-.58.13-.65-.05-.07-.21-.12-.44-.24z"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.457l-6.354 1.682zM6.715 20.94c1.558.883 3.322 1.393 5.174 1.394 5.464 0 9.91-4.446 9.911-9.911-.001-5.464-4.447-9.91-9.91-9.91-5.465 0-9.91 4.447-9.911 9.911.001 2.036.63 3.962 1.743 5.613l.275.46v.052l-.565 2.065 2.073-.553.465.281z"/></svg>
               <span x-text="selectedID || selectedRB ? 'Review & Order on WhatsApp' : 'Please Select a Design'"></span>
             </button>
         </div>
@@ -170,7 +183,7 @@
 
     <!-- Footer -->
     <footer class="py-14 border-t border-gray-800 text-center text-base fade-in-section">
-        <p class="text-sm text-gray-500">© 2025 PureHex Media. All rights reserved.</p>
+        <p class="text-sm text-gray-500">© 2025 ProHex Media. All rights reserved.</p>
     </footer>
 
     <!-- Information Popup Modal -->
@@ -206,7 +219,7 @@
             </button>
             
             <a :href="generateOrderLink()" target="_blank" @click="isInfoModalOpen = false" class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-6 py-2.5 rounded-full text-sm transition-all duration-300 inline-block hover:scale-105">
-              Pureceed
+              Proceed
             </a>
           </div>
       </div>
@@ -230,7 +243,7 @@
             loop: true,
             spaceBetween: 24,
             autoplay: {
-                delay: 900, 
+                delay: 3000, 
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
